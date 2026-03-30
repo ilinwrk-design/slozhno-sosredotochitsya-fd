@@ -8,3 +8,6 @@
   --bg-image: url('../images/cover-image-light.png');
   --bg-color: #FFF1F7;
 }
+:root.theme-light .header__rec {
+  display: none; /* скрываем декоративный элемент в светлой теме */
+}

@@ -1,6 +1,10 @@
 :root {
   --bg-image: url('../images/cover-image-dark.png');
   --bg-color: #000028;
+  --decor-color: #ff0070;
+  --title-color: #db00ff; /* цвет большого заголовка */
+  --accent-color: #ff0070; /* акцентный цвет плашек и тени */
+  --decor-text-color: #000028; /* цвет текста на акцентной плашке */
 }
 /*
   Переменные для вашего проекта

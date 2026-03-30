@@ -10,3 +10,104 @@
   background-attachment: fixed;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
+
+.header {
+  min-block-size: max(100vh, 668px);
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+}
+
+.header__theme-menu {
+  justify-self: end;
+  align-self: start;
+}
+
+.header__title {
+  align-self: center;
+}
+.header__subtitle {
+  justify-self: end;
+  align-self: end;
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
+  content: ""; 
+  position: absolute; 
+  inline-size: 25px; 
+  block-size: 25px;
+}
+
+.decorated-zone::before {
+  top: 10px; 
+  right: 10px; 
+  border-top: 1px solid var(--decor-color); 
+  border-right: 1px solid var(--decor-color);
+}
+
+.decorated-zone::after {
+  bottom: 10px; 
+  left: 10px; 
+  border-bottom: 1px solid var(--decor-color);
+  border-left: 1px solid var(--decor-color);
+}
+
+.header__rec {
+  position: absolute; 
+  top: 10px;
+  right: 38px;
+  color: var(--accent-color); 
+  line-height: 1.39; 
+  text-transform: uppercase;
+}
+.header__rec::after {
+  content: ""; 
+  position: absolute; 
+  top: 8px; 
+  right: -19px; 
+  inline-size: 9px; 
+  block-size: 9px; 
+  border-radius: 50%; 
+  background-color: var(--accent-color);
+  box-shadow: 0 0 4px 2px var(--accent-color); 
+}
+
+.header {
+  min-block-size: max(100vh, 668px); 
+  padding: 10px; /* внутренние отступы на мобильном */
+  display: grid; 
+  grid-template-rows: 1fr min-content 1fr; 
+  align-items: center; 
+}
+
+.header__title {
+  color: var(--title-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);/* адаптивный размер для мобильного диапазона */
+  line-height: 0.83;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  align-self: center;
+}
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--decor-text-color);
+}
+.header__text {
+  justify-self: end;
+  align-self: center;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+@media (width >= 768px) {
+  .header {
+    padding: 20px; 
+  }
+
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); /* адаптивный размер для планшета и десктопа */
+  }
+}
