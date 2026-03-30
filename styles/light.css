@@ -7,6 +7,7 @@
 :root.theme-light {
   --bg-image: url('../images/cover-image-light.png');
   --bg-color: #FFF1F7;
+  --accent-color: #ff8dcb;
 }
 :root.theme-light .header__rec {
   display: none; /* скрываем декоративный элемент в светлой теме */
