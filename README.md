@@ -1,0 +1,1 @@
+git@github.com:ilinwrk-design/slozhno-sosredotochitsya-fd.git
