@@ -19,8 +19,65 @@
 
 .header__theme-menu {
   justify-self: end;
-  align-self: start;
+  align-self: center;
 }
+
+.header__theme-menu-list {
+  display: grid;
+  gap: 10px;
+}
+
+@media (width >= 768px) {
+  .header__theme-menu {
+    justify-self: end; /* меню остаётся справа */
+    align-self:center; /* на планшете лучше прижать к верху */
+  }
+}
+
+@media (width >= 1024px) {
+  .header__theme-menu {
+    justify-self: center; /* на десктопе меню по центру */
+    align-self: start; /* остаётся наверху */
+  }
+
+  .header__theme-menu-list {
+    grid-template-columns: repeat(3, auto); /* кнопки в строку */
+  }
+}
+
+.header__theme-menu-button {
+  border: 1px solid transparent;
+  padding: 1.5px 13px;
+  color: var(--menu-button-color);
+  background-color: transparent;
+  text-transform: lowercase;
+  line-height: 1;
+  cursor: pointer;
+  font-size: var(--text-size);
+}
+
+.header__theme-menu-button:hover {
+  border-color: var(--menu-button-hover-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-color: transparent;
+  border-bottom-color: var(--menu-button-color);
+  padding-bottom: 2px;
+}
+
+.header__theme-menu-button_active {
+  border-color: var(--menu-button-color); /* рамка активной кнопки */
+}
+
+.header__theme-menu-button:disabled {
+  pointer-events: none; /* отключаем взаимодействие */
+}
+
 
 .header__title {
   align-self: center;
@@ -61,8 +118,9 @@
   top: 10px;
   right: 38px;
   color: var(--accent-color); 
-  line-height: 1.39; 
+  line-height: 25px; 
   text-transform: uppercase;
+  font-size: var(--text-size);
 }
 .header__rec::after {
   content: ""; 
@@ -233,4 +291,69 @@
 
 .card_type_tips .card__text + .card__subtitle {
   margin-block-start: 20px;
+}
+
+.gallery-section {
+  gap: 10px;
+}
+
+.gallery {
+  display: grid; 
+  gap: 10px; 
+}
+.gallery__image {
+  inline-size: 100%; 
+  block-size: 100%; 
+  object-fit: cover; 
+  display: block; 
+}
+
+@media (width >= 768px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; /* на широких экранах расстояние больше */
+  }
+}
+
+@media (width >= 768px) {
+  .gallery__image_type_sunset {
+    grid-column: span 2; /* занимает две колонки */
+  }
+
+  .gallery__image_type_ice-cream {
+    grid-row: span 2; /* занимает две строки */
+  }
+
+  .gallery__image_type_tape {
+    grid-row: span 2; /* занимает две строки */
+  }
+
+  .gallery__image_type_street {
+    grid-column: span 2; /* занимает две колонки */
+  }
+}
+
+.footer {
+  min-block-size: max(100vh, 668px);
+  padding: 10px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.footer__title {
+  color: var(--title-color); 
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem); /* мобильный размер */
+  line-height: 0.83; /* плотная высота строки, как в макете */
+  text-shadow: 2px 2px 0 var(--accent-color); 
+}
+
+@media (width >= 768px) {
+  .footer {
+    padding: 20px; /* увеличиваем внутренние отступы */
+  }
+
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); /* размер для планшета и десктопа */
+  }
 }
