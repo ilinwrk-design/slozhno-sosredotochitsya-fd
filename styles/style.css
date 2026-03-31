@@ -46,7 +46,7 @@
     grid-column: 1 / -1;
     justify-self: start;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    margin-left: -20px;/* компенсируем отступ, который добавился к заголовку из-за увеличения внутренних отступов в шапке. Юрий разрешил!*/
+    margin-left: -20px; /* компенсируем отступ, который добавился к заголовку из-за увеличения внутренних отступов в шапке. Юрий разрешил!*/
   }
   .header__text {
     grid-row: 3;
@@ -54,7 +54,6 @@
     justify-self: end;
     align-self: center;
   }
-
 }
 
 @media (width >= 1024px) {
@@ -139,57 +138,57 @@
 
 .decorated-zone::before,
 .decorated-zone::after {
-  content: ""; 
-  position: absolute; 
-  inline-size: 25px; 
+  content: "";
+  position: absolute;
+  inline-size: 25px;
   block-size: 25px;
 }
 
 .decorated-zone::before {
-  top: 20px; 
-  right: 20px; 
-  border-top: 1px solid var(--decor-color, #ff0070); 
+  top: 20px;
+  right: 20px;
+  border-top: 1px solid var(--decor-color, #ff0070);
   border-right: 1px solid var(--decor-color, #ff0070);
 }
 
 .decorated-zone::after {
-  bottom: 20px; 
-  left: 20px; 
+  bottom: 20px;
+  left: 20px;
   border-bottom: 1px solid var(--decor-color, #ff0070);
   border-left: 1px solid var(--decor-color, #ff0070);
 }
 
 .header__rec {
-  position: absolute; 
+  position: absolute;
   top: 25px;
   right: 48px;
-  color: var(--accent-color, #ff0070); 
-  line-height: 25px; 
+  color: var(--accent-color, #ff0070);
+  line-height: 25px;
   text-transform: uppercase;
   font-size: var(--text-size, 18px);
 }
 .header__rec::after {
-  content: ""; 
-  position: absolute; 
-  top: 8px; 
-  right: -19px; 
-  inline-size: 9px; 
-  block-size: 9px; 
-  border-radius: 50%; 
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: -19px;
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
   background-color: var(--accent-color, #ff0070);
-  box-shadow: 0 0 4px 2px var(--accent-color, #ff0070); 
+  box-shadow: 0 0 4px 2px var(--accent-color, #ff0070);
 }
 
 .header {
-  min-block-size: max(100vh, 668px); 
+  min-block-size: max(100vh, 668px);
   padding: 10px; /* внутренние отступы на мобильном */
-  display: grid; 
-  grid-template-rows: 1fr min-content 1fr; 
-  align-items: center; 
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  align-items: center;
 }
 
 .header__title {
- grid-row: 2;
+  grid-row: 2;
   grid-column: 1 / -1;
   justify-self: start;
   align-self: center;
@@ -215,11 +214,15 @@
 
 @media (width >= 768px) {
   .header {
-    padding: 20px; 
+    padding: 20px;
   }
 
   .header__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); /* адаптивный размер для планшета и десктопа */
+    font-size: clamp(
+      7.5rem,
+      0.5625rem + 14.4531vw,
+      9.8125rem
+    ); /* адаптивный размер для планшета и десктопа */
   }
 }
 
@@ -239,13 +242,13 @@
     column-gap: 20px; /* расстояние между колонками */
   }
 
-@media (width >= 1024px) {
-  .content-section {
-    grid-template-columns: repeat(3, 1fr); /* три одинаковые колонки */
-    column-gap: 20px; /* расстояние между колонками */
-    align-items: start; /* элементы прижимаются к верху своих ячеек */
+  @media (width >= 1024px) {
+    .content-section {
+      grid-template-columns: repeat(3, 1fr); /* три одинаковые колонки */
+      column-gap: 20px; /* расстояние между колонками */
+      align-items: start; /* элементы прижимаются к верху своих ячеек */
+    }
   }
-}
 }
 .content-section + .content-section {
   margin-block-start: var(--section-gap, 80px);
@@ -275,7 +278,7 @@
   gap: 10px;
 }
 
-.card__title{
+.card__title {
   font-weight: bold;
 }
 .card__subtitle {
@@ -323,7 +326,6 @@
   display: inline-block;
 }
 
-
 @media (width >= 1024px) {
   .content-section__articles_type_row {
     grid-column: 1 / -1; /* растягиваем блок от первой до последней колонки */
@@ -332,12 +334,12 @@
   }
 }
 
-.card_type_tips{
-  gap:0;
+.card_type_tips {
+  gap: 0;
 }
 
 .card_type_tips .card__title + .card__subtitle {
-  margin-block-start: 20px; 
+  margin-block-start: 20px;
 }
 
 .card_type_tips .card__subtitle + .card__text {
@@ -355,14 +357,14 @@
 }
 
 .gallery {
-  display: grid; 
-  gap: 10px; 
+  display: grid;
+  gap: 10px;
 }
 .gallery__image {
-  inline-size: 100%; 
-  block-size: 100%; 
-  object-fit: cover; 
-  display: block; 
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .gallery-section .content-section__title {
@@ -415,10 +417,14 @@
 }
 
 .footer__title {
-  color: var(--title-color, #db00ff); 
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem); /* мобильный размер */
-  line-height: 0.83; 
-  text-shadow: 2px 2px 0 var(--shadow-light, #ff0070); 
+  color: var(--title-color, #db00ff);
+  font-size: clamp(
+    7.25rem,
+    7.0115rem + 1.0178vw,
+    7.5rem
+  ); /* мобильный размер */
+  line-height: 0.83;
+  text-shadow: 2px 2px 0 var(--shadow-light, #ff0070);
 }
 
 @media (width >= 768px) {
@@ -427,6 +433,10 @@
   }
 
   .footer__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem); /* размер для планшета и десктопа */
+    font-size: clamp(
+      7.5rem,
+      0.5625rem + 14.4531vw,
+      9.8125rem
+    ); /* размер для планшета и десктопа */
   }
 }

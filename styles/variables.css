@@ -1,11 +1,8 @@
 :root {
-  --bg-image: url('../images/cover-image-dark.png');
-   
+  --bg-image: url("../images/cover-image-dark.png");
   --section-gap: 80px;
   --main-top-gap: 60px;
   --page-padding: 20px;
   --text-size: 18px;
   --line-height: 1.3;
-
 }
-
