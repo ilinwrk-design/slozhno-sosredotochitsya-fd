@@ -61,7 +61,7 @@
     justify-self: end;
     align-self: center;
   }
-  
+
   :root {
     --page-padding: 20px;
     --decor-offset: 20px;
@@ -69,7 +69,6 @@
     --main-top-gap: 60px;
   }
 }
-
 
 @media (width >= 1024px) {
   .header {
@@ -194,7 +193,6 @@
   font-size: var(--text-size, 18px);
   font-weight: 700;
   line-height: 23.4px;
-  padding: 1px;
 }
 
 @media (width >= 768px) {
@@ -221,20 +219,60 @@
   gap: 20px;
 }
 
-@media (width >= 768px) {
-  .content-section {
-    grid-template-columns: 355px 1fr; /* левая колонка фикс, правая — резиновая */
-    column-gap: 20px; /* расстояние между колонками */
+
+  @media (width >= 768px) {
+  .content-section_type_columns {
+    grid-template-columns: 236px 1fr;
+    column-gap: 20px;
+    align-items: start;
+  }
+
+  .content-section_type_columns .content-section__title {
+    grid-column: 1;
+  }
+
+  .content-section_type_columns .content-section__articles {
+    grid-column: 2;
+  }
+
+  .content-section_type_stack {
+    grid-template-columns: 236px 1fr;
+    column-gap: 20px;
+    align-items: start;
+  }
+
+  .content-section_type_stack .content-section__title {
+    grid-column: 1;
+  }
+
+  .content-section_type_stack .content-section__articles {
+    grid-column: 1 / -1;
+  }
   }
 
   @media (width >= 1024px) {
-    .content-section {
-      grid-template-columns: repeat(3, 1fr); /* три одинаковые колонки */
-      column-gap: 20px; /* расстояние между колонками */
-      align-items: start; /* элементы прижимаются к верху своих ячеек */
-    }
+  .content-section_type_columns {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    align-items: start;
+  }
+
+  .content-section_type_columns .content-section__articles {
+    grid-column: span 2;
+  }
+
+  .content-section_type_stack {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    align-items: start;
+  }
+
+  .content-section_type_stack .content-section__articles {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
+
 .content-section + .content-section {
   margin-block-start: 50px;
 }
@@ -388,7 +426,7 @@
 
 .footer {
   min-block-size: max(100vh, 668px);
-  padding: 10px;
+  padding: var(--page-padding);
   display: grid;
   align-items: center;
   justify-items: center;
