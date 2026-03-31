@@ -5,12 +5,11 @@
   --title-color: #db00ff; /* цвет большого заголовка */
   --accent-color: #ff0070; /* акцентный цвет плашек и тени */
   --decor-text-color: #000028; 
-  --main-font: 'IBM Plex mono', monospace;
-  --section-gap: 50px;
+  --section-gap: 60px;
   --section-gap-tablet: 80px;
   --main-top-gap: 40px;
   --main-top-gap-tablet: 60px;
-  --page-padding: 10px;
+  --page-padding: 20px;
   --page-padding-tablet: 20px;
   --text-size: 18px;
   --line-height: 1.3;

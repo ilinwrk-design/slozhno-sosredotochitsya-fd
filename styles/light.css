@@ -8,7 +8,15 @@
   --bg-image: url('../images/cover-image-light.png');
   --bg-color: #FFF1F7;
   --accent-color: #ff8dcb;
-}
+  --title-color: #ffc2e6; 
+  --content-title-color: #353430;
+  --decor-text-color: #353430;
+  --text-color:#353430;
+  --menu-button-color: #353430;
+  --decor-color:#353430;
+  --shadow-light: #FF0070;
+  --menu-button-hover-color:rgba(50, 49, 45, 0.4);
+} 
 :root.theme-light .header__rec {
   display: none; /* скрываем декоративный элемент в светлой теме */
 }
