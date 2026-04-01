@@ -9,7 +9,7 @@
     --text-color: #353430;
     --menu-button-color: #353430;
     --decor-color: #353430;
-    --shadow-light: #ff0070;
+    --link-shadow-color: #ff0070;
     --menu-button-hover-color: rgba(50, 49, 45, 0.4);
   }
 }
@@ -24,7 +24,7 @@
   --text-color: #353430;
   --menu-button-color: #353430;
   --decor-color: #353430;
-  --shadow-light: #ff0070;
+  --link-shadow-color: #ff0070;
   --menu-button-hover-color: rgba(50, 49, 45, 0.4);
 }
 :root.theme-light .header__rec {
