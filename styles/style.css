@@ -42,21 +42,16 @@
   }
 
   .header__theme-menu {
-    grid-row: 1;
     grid-column: 1 / -1;
     justify-self: end;
     align-self: center;
   }
 
   .header__title {
-    grid-row: 2;
-    grid-column: 1 / -1;
-    justify-self: start;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     margin-left: -20px; /* компенсируем отступ, который добавился к заголовку из-за увеличения внутренних отступов в шапке. Юрий разрешил!*/
   }
   .header__text {
-    grid-row: 3;
     grid-column: 2;
     justify-self: end;
     align-self: center;
@@ -65,7 +60,7 @@
   :root {
     --page-padding: 20px;
     --decor-offset: 20px;
-    --rec-offset: 20px;
+    --rec-offset: 21px;
     --main-top-gap: 60px;
   }
 }
@@ -195,20 +190,6 @@
   line-height: 23.4px;
 }
 
-@media (width >= 768px) {
-  .header {
-    padding: 20px;
-  }
-
-  .header__title {
-    font-size: clamp(
-      7.5rem,
-      0.5625rem + 14.4531vw,
-      9.8125rem
-    ); /* адаптивный размер для планшета и десктопа */
-  }
-}
-
 .main {
   padding-inline: var(--page-padding, 10px);
   padding-block-start: var(--main-top-gap, 40px);
@@ -218,8 +199,14 @@
   display: grid;
   gap: 20px;
 }
-
+.content-section + .content-section {
+  margin-block-start: 50px;
+}
 @media (width >= 768px) {
+  .main {
+    padding-inline: var(--page-padding, 10px);
+    padding-block-start: 60px;
+  }
   .content-section_type_columns {
     grid-template-columns: 236px 1fr;
     column-gap: 20px;
@@ -247,6 +234,10 @@
   .content-section_type_stack .content-section__articles {
     grid-column: 1 / -1;
   }
+
+  .content-section + .content-section {
+  margin-block-start: 81px;
+}
 }
 
 @media (width >= 1024px) {
@@ -272,9 +263,7 @@
   }
 }
 
-.content-section + .content-section {
-  margin-block-start: 50px;
-}
+
 
 .content-section__title {
   color: var(--content-title-color, #ff0070);
@@ -456,4 +445,7 @@
       9.8125rem
     ); /* размер для планшета и десктопа */
   }
+  .main + .footer {
+  margin-block-start: 61px;
+}
 }
