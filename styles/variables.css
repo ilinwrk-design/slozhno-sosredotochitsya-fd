@@ -1,6 +1,5 @@
 :root {
   --bg-image: url("../images/cover-image-dark.png");
-  --bg-image: url("../images/cover-image-dark.png");
   --bg-color: #000028;
   --decor-color: #ff0070;
   --title-color: #db00ff; /* цвет большого заголовка */
@@ -19,4 +18,14 @@
   --page-padding: 10px;
   --decor-offset: 10px;
   --rec-offset: 10px;
+  
+}
+
+@media (width >= 768px) {
+  :root {
+    --page-padding: 20px;
+    --decor-offset: 20px;
+    --rec-offset: 21px;
+    --main-top-gap: 60px;
+  }
 }
