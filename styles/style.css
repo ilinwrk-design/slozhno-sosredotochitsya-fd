@@ -328,7 +328,7 @@
   gap: 0;
 }
 
-.card_type_tips .card__title + .card__text{
+.card_type_tips .card__title + .card__text {
   margin-block-start: 10px;
 }
 
